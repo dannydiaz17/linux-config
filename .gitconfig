@@ -1,0 +1,6 @@
+[user]
+	name = Danny Diaz
+	email = daniel.diaz.oem@gmail.com
+	signingkey = 0x6B20372362132A58
+[credential]
+	helper = cache --timeout=3600

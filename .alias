@@ -1,0 +1,39 @@
+#!/bin/sh
+
+# Applications
+
+alias \
+        v="nvim " \
+        py="python3" \
+        r="ranger"
+
+# Directories
+
+alias \
+        h="/home/danny/" \
+        d="/home/danny/Downloads/" \
+        D="/home/danny/Documents/" \
+        cf="/home/danny/.config/" \
+        co="/home/danny/coding/" \
+        cop="/home/danny/coding/python/"
+
+# Configure files
+
+alias \
+        acf="nvim ~/.alias" \
+        vcf="nvim ~/.config/nvim/init.vim" \
+        zcf="nvim ~/.zshrc"
+
+
+function p() {
+        case "$1" in
+                -Syyu ) command sudo apt update && sudo apt upgrade ;;
+                -Syy ) command sudo apt update ;;
+                -Sy ) command sudo apt update ;;
+                -Si ) command sudo apt search "${@:2:$#}";;
+                -Ss ) command sudo apt list "${@:2:$#}";;
+                -S ) command sudo apt install "${@:2:$#}" ;;
+                -R ) command sudo apt remove "${@:2:$#}";;
+                * ) command sudo apt "$@" ;;
+        esac
+}

@@ -30,7 +30,7 @@ echo "Getting .(dot)-files...";
 	git clone -b debian --bare git@github.com:dannydiaz17/linux-config.git $HOME/.dot
 	$dot remote add -t debian origin git@github.com:dannydiaz17/linux-config.git
 	$dot branch --set-upstream-to=debian
-	$dot checkout
+	$dot checkout -f
 	gopass git clone git@github.com:dannydiaz/gopass.git ~/.password-store/.git
 	gopass git remote add origin git@github.com:dannydiaz17/gopass.git; 
 	gopass git branch --set-upstream-to=origin/master

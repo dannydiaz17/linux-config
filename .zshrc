@@ -16,8 +16,7 @@ promptinit; prompt bart
 
 # Source [file]
 . $HOME/.alias \
-. $HOME/.profile \
-. $HOME/.selected_editor
+. $HOME/.profile 
 
 # History
 HISTSIZE=1000

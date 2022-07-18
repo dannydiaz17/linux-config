@@ -31,6 +31,7 @@ echo "Getting .(dot)-files...";
 	git clone -b debian --bare git@github.com:dannydiaz17/linux-config.git $HOME/.dot
 	$dot remote add origin git git@github.com:dannydiaz17/linux-config.git
 	$dot branch --set-upstream-to=origin/debian
+	$dot checkout
 
 echo "DONE";
 

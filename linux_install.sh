@@ -42,7 +42,8 @@ echo "Setting up Git Auth...";
 
 	curl -LO https://raw.githubusercontent.com/GitCredentialManager/git-credential-manager/main/src/linux/Packaging.Linux/install-from-source.sh && sh ./install-from-source.sh && git-credential-manager-core configure
 	ssh-keygen -t ed25519 -C "daniel.diaz.oem@gmail.com";
-	cat $HOME/.ssh/id_ed25519.pub; echo "Add this Public Key to GitHub"; sleep 10;
+	cat $HOME/.ssh/id_ed25519.pub; echo "Add this Public Key to GitHub";
+	eval "$(ssh-agent -s)"; ssh-add ~/.ssh/id_ed25519; sleep 5; echo "\n";
 	gpg --gen-key; gopass init daniel.diaz.oem@gmail.com;
 	gopass git remote add origin git@github.com:dannydiaz17/gopass.git; 
 	gopass git branch --set-upstream-to=origin/master

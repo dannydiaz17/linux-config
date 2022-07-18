@@ -4,7 +4,7 @@
 dot="/usr/bin/git --git-dir=$HOME/.dot/ --work-tree=$HOME"
 
 # Packages to be installed
-PACKAGES=("neovim" "ranger" "python3" "zsh" "gopass" "git" )
+PACKAGES="neovim ranger python3 zsh gopass git"
 
 
 # Updates System and Installs Packages

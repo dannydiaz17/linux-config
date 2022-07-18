@@ -27,12 +27,13 @@ echo "DONE";
 # Pulls .alias and .zshrc files, saves them in /home/"$USER"/
 
 echo "Getting .(dot)-files...";
-	gopass git clone git@github.com:dannydiaz/gopass.git ~/.password-store
 	git clone -b debian --bare git@github.com:dannydiaz17/linux-config.git $HOME/.dot
 	$dot remote add origin git git@github.com:dannydiaz17/linux-config.git
 	$dot branch --set-upstream-to=origin/debian
 	$dot checkout
-
+	gopass git clone git@github.com:dannydiaz/gopass.git ~/.password-store/.git
+	gopass git remote add origin git@github.com:dannydiaz17/gopass.git; 
+	gopass git branch --set-upstream-to=origin/master
 echo "DONE";
 
 echo "Setting up Git Auth...";
@@ -43,12 +44,11 @@ echo "Setting up Git Auth...";
 	curl -LO https://raw.githubusercontent.com/GitCredentialManager/git-credential-manager/main/src/linux/Packaging.Linux/install-from-source.sh && sh ./install-from-source.sh && git-credential-manager-core configure
 	ssh-keygen -t ed25519 -C "daniel.diaz.oem@gmail.com";
 	cat $HOME/.ssh/id_ed25519.pub; echo "Add this Public Key to GitHub";
-	eval "$(ssh-agent -s)"; ssh-add ~/.ssh/id_ed25519; sleep 5; echo "\n";
-	gpg --gen-key; gopass init daniel.diaz.oem@gmail.com;
-	gopass git remote add origin git@github.com:dannydiaz17/gopass.git; 
-	gopass git branch --set-upstream-to=origin/master
-
-echo "DONE";
+	eval "$(ssh-agent -s)"; ssh-add ~/.ssh/id_ed25519; sleep 2; echo "\n";
+	gpg --gen-key; gpg --list-secret-keys --keyid-format=long; 
+	echo "Copy Secret Key and paste after the following command";
+	echo 	"\n gpg --armor --export {SECRET_KEY}\n" \
+		"Take your generated PGP Public Key BLOCK to GitHub";
 
 
 # Changes "$SHELL" to ZSH

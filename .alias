@@ -3,7 +3,8 @@
 # Applications
 
 alias \
-        v="nvim " \
+        gp="gopass show -c" \
+	v="nvim " \
         py="python3" \
         r="ranger"
 

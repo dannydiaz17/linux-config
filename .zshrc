@@ -26,3 +26,6 @@ HISTFILESIZE=2000
 setopt autocd
 setopt automenu
 setopt HIST_IGNORE_ALL_DUPS
+source /home/danny/.password-store/test/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+#ZPLUG 

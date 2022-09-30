@@ -12,3 +12,5 @@ set noswapfile
 set wrap
 set si
 set termguicolors
+colorscheme murphy
+

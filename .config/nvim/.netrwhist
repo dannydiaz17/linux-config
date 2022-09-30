@@ -1,5 +1,12 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =3
+let g:netrw_dirhistcnt =1
+let g:netrw_dirhist_1='/home/danny/.local/share/nvim/shada'
+let g:netrw_dirhist_0='/home/danny/.local/share/nvim'
+let g:netrw_dirhist_9='/home/danny/.dot'
+let g:netrw_dirhist_8='/home/danny'
+let g:netrw_dirhist_7='/home/danny/.dot'
+let g:netrw_dirhist_6='/home/danny'
+let g:netrw_dirhist_5='/home/danny/.local'
+let g:netrw_dirhist_4='/home/danny/.local/share'
 let g:netrw_dirhist_3='/home/danny/coding/python/algotrading/config'
 let g:netrw_dirhist_2='/home/danny/.config/nvim'
-let g:netrw_dirhist_1='/home/danny/.config'

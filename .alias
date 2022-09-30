@@ -24,12 +24,12 @@ alias \
         acf="nvim ~/.alias" \
         vcf="nvim ~/.config/nvim/init.vim" \
         zcf="nvim ~/.zshrc" \
-  	dot="/usr/bin/git --git-dir=$HOME/.dot/.git/ --work-tree=$HOME/"
+        dot="/usr/bin/git --git-dir=$HOME/.dot/.git/ --work-tree=$HOME/"
 
 # Better Commands
 
 alias \
-	ls="ls -a" \
+	ls="ls --color=auto -a" \
 	rn="mv" \
 	nano="nano -l"
 

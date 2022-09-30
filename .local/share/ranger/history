@@ -6,3 +6,4 @@ delete
 
 q
 delete
+shell sort LS_COLORS | dircolors --bourne-shell - > ~/.local/share/lscolors.sh

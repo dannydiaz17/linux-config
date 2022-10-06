@@ -1,8 +1,4 @@
 #!/bin/sh
-# Functions for less clutter 
-
-LIST_CONTENTS(){ls --color=auto -a $pwd}
-
 # Applications
 
 alias \
@@ -13,16 +9,17 @@ alias \
 
 # Directories
 
-alias \
-        h="cd /home/danny/;                             LIST_CONTENTS;" \
-        d="/home/danny/Downloads;                       LIST_CONTENTS;" \
-        D="/home/danny/Documents/;                      LIST_CONTENTS;" \
-        cf="/home/danny/.config/;                       LIST_CONTENTS;" \
-        co="/home/danny/coding/;                        LIST_CONTENTS;" \
-        cop="/home/danny/coding/python/;                LIST_CONTENTS;" \
-        copa="/home/danny/coding/python/algotrading/;   LIST_CONTENTS"
-                
+chpwd(){ls --color=auto -a $PWD} # Run 'ls' command when changing folders
 
+alias \
+        h="/home/danny/;                             " \
+        d="/home/danny/Downloads;                    " \
+        D="/home/danny/Documents/;                   " \
+        cf="/home/danny/.config/;                    " \
+        co="/home/danny/coding/;                     " \
+        cop="/home/danny/coding/python/;             " \
+        copa="/home/danny/coding/python/algotrading/;"
+                
 # Configure files
 
 alias \
@@ -36,7 +33,9 @@ alias \
 alias \
 	ls="ls --color=auto -a" \
 	rn="mv" \
-	nano="nano -l"
+	nano="nano -l" \
+  sa="source ~/.alias" \
+  sz="source ~/.zshrc" 
 
 # 'apt' to 'pacman' wrapper
 

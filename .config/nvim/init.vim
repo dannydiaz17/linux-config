@@ -13,4 +13,5 @@ set wrap
 set si
 set termguicolors
 colorscheme murphy
-
+command! Vb normal! <C-v>
+nnoremap <C-b> <C-v>

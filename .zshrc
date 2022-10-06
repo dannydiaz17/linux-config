@@ -19,8 +19,7 @@ export LS_COLORS="$(vivid -m 8-bit generate molokai)"
 
 # Source [file]
 . $HOME/.alias \
-. $HOME/.profile \
-. $HOME/.config/zsh/lscolors.sh
+. $HOME/.profile 
 
 # History
 HISTSIZE=1000

@@ -1,22 +1,27 @@
 #!/bin/sh
+# Functions for less clutter 
+
+LIST_CONTENTS(){ls --color=auto -a $pwd}
 
 # Applications
 
 alias \
         gp="gopass show -c" \
-	v="nvim " \
+        v="nvim " \
         py="python3" \
         r="ranger"
 
 # Directories
 
 alias \
-        h="/home/danny/" \
-        d="/home/danny/Downloads/" \
-        D="/home/danny/Documents/" \
-        cf="/home/danny/.config/" \
-        co="/home/danny/coding/" \
-        cop="/home/danny/coding/python/"
+        h="cd /home/danny/;                             LIST_CONTENTS;" \
+        d="/home/danny/Downloads;                       LIST_CONTENTS;" \
+        D="/home/danny/Documents/;                      LIST_CONTENTS;" \
+        cf="/home/danny/.config/;                       LIST_CONTENTS;" \
+        co="/home/danny/coding/;                        LIST_CONTENTS;" \
+        cop="/home/danny/coding/python/;                LIST_CONTENTS;" \
+        copa="/home/danny/coding/python/algotrading/;   LIST_CONTENTS"
+                
 
 # Configure files
 

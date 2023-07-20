@@ -18,8 +18,9 @@ alias \
         cf="/home/danny/.config/;                    " \
         co="/home/danny/coding/;                     " \
         cop="/home/danny/coding/python/;             " \
-        copa="/home/danny/coding/python/algotrading/;"
-                
+        copa="/home/danny/coding/python/algotrading/;" \
+        copg="/home/danny/coding/python/gymskis/;    "        
+
 # Configure files
 
 alias \
@@ -27,6 +28,8 @@ alias \
         vcf="nvim ~/.config/nvim/init.vim" \
         zcf="nvim ~/.zshrc" \
         dot="/usr/bin/git --git-dir=$HOME/.dot/.git/ --work-tree=$HOME/"
+
+dots=("$HOME/.alias" "$HOME/.profile" "$HOME/.zshrc")
 
 # Better Commands
 
@@ -51,3 +54,5 @@ function p() {
                 * ) command sudo apt "$@" ;;
         esac
 }
+
+function refresh(){. ~/.alias;. ~/.profile;. ~/.zshrc; clear; }

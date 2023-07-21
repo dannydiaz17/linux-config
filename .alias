@@ -45,7 +45,8 @@ alias \
 function refresh(){. ~/.alias;. ~/.profile;. ~/.zshrc; clear; };
 
 # Uploads 'dot files' to Git Bare Repo
-function updots(){dot add $dots;read commit_msg; dot commit -m $commit_msg; dot push;}
+function updots(){dot add $dots; echo "Commit Message-------";
+        read commit_msg; dot commit -m $commit_msg; dot push;}
 
 # 'apt' to 'pacman' wrapper
 

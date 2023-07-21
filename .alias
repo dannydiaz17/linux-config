@@ -31,6 +31,7 @@ alias \
 
 dots=("$HOME/.alias" "$HOME/.profile" "$HOME/.zshrc")
 
+
 # Better Commands
 
 alias \
@@ -39,6 +40,12 @@ alias \
 	nano="nano -l" \
   sa="source ~/.alias" \
   sz="source ~/.zshrc" 
+
+# 'refresh' Environmental Variables
+function refresh(){. ~/.alias;. ~/.profile;. ~/.zshrc; clear; };
+
+# Uploads 'dot files' to Git Bare Repo
+function updots(){dot add $dots;read commit_msg; dot commit -m $commit_msg; dot push;}
 
 # 'apt' to 'pacman' wrapper
 
@@ -55,4 +62,4 @@ function p() {
         esac
 }
 
-function refresh(){. ~/.alias;. ~/.profile;. ~/.zshrc; clear; }
+
